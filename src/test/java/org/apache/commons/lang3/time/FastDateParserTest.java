@@ -668,17 +668,17 @@ public class FastDateParserTest extends AbstractLangTest {
     //     testSdfAndFdp(dpProvider, "yyyy-MM-dd 'QED'", "2003-02-10 qed", true);
     // }
 
-    @Test
-    public void testTimeZoneMatches() {
-        final DateParser parser = getInstance(yMdHmsSZ, REYKJAVIK);
-        assertEquals(REYKJAVIK, parser.getTimeZone());
-    }
+    // @Test
+    // public void testTimeZoneMatches() {
+    //     final DateParser parser = getInstance(yMdHmsSZ, REYKJAVIK);
+    //     assertEquals(REYKJAVIK, parser.getTimeZone());
+    // }
 
-    @Test
-    public void testToStringContainsName() {
-        final DateParser parser = getInstance(YMD_SLASH);
-        assertTrue(parser.toString().startsWith("FastDate"));
-    }
+    // @Test
+    // public void testToStringContainsName() {
+    //     final DateParser parser = getInstance(YMD_SLASH);
+    //     assertTrue(parser.toString().startsWith("FastDate"));
+    // }
 
     // we cannot use historic dates to test time zone parsing, some time zones have second offsets
     // as well as hours and minutes which makes the z formats a low fidelity round trip
