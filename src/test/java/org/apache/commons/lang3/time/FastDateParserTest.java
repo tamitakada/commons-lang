@@ -680,27 +680,27 @@ public class FastDateParserTest extends AbstractLangTest {
     //     assertTrue(parser.toString().startsWith("FastDate"));
     // }
 
-    // // we cannot use historic dates to test time zone parsing, some time zones have second offsets
-    // // as well as hours and minutes which makes the z formats a low fidelity round trip
-    // @Test
-    // public void testTzParses() throws Exception {
-    //     // Check that all Locales can parse the time formats we use
-    //     for (final Locale locale : Locale.getAvailableLocales()) {
-    //         final FastDateParser fdp = new FastDateParser("yyyy/MM/dd z", TimeZone.getDefault(), locale);
+    // we cannot use historic dates to test time zone parsing, some time zones have second offsets
+    // as well as hours and minutes which makes the z formats a low fidelity round trip
+    @Test
+    public void testTzParses() throws Exception {
+        // Check that all Locales can parse the time formats we use
+        // for (final Locale locale : Locale.getAvailableLocales()) {
+        //     final FastDateParser fdp = new FastDateParser("yyyy/MM/dd z", TimeZone.getDefault(), locale);
 
-    //         for (final TimeZone timeZone : new TimeZone[] {NEW_YORK, REYKJAVIK, TimeZones.GMT}) {
-    //             final Calendar cal = Calendar.getInstance(timeZone, locale);
-    //             cal.clear();
-    //             cal.set(Calendar.YEAR, 2000);
-    //             cal.set(Calendar.MONTH, 1);
-    //             cal.set(Calendar.DAY_OF_MONTH, 10);
-    //             final Date expected = cal.getTime();
+        //     for (final TimeZone timeZone : new TimeZone[] {NEW_YORK, REYKJAVIK, TimeZones.GMT}) {
+        //         final Calendar cal = Calendar.getInstance(timeZone, locale);
+        //         cal.clear();
+        //         cal.set(Calendar.YEAR, 2000);
+        //         cal.set(Calendar.MONTH, 1);
+        //         cal.set(Calendar.DAY_OF_MONTH, 10);
+        //         final Date expected = cal.getTime();
 
-    //             final Date actual = fdp.parse("2000/02/10 " + timeZone.getDisplayName(locale));
-    //             assertEquals(expected, actual, "timeZone:" + timeZone.getID() + " locale:" + locale.getDisplayName());
-    //         }
-    //     }
-    // }
+        //         final Date actual = fdp.parse("2000/02/10 " + timeZone.getDisplayName(locale));
+        //         assertEquals(expected, actual, "timeZone:" + timeZone.getID() + " locale:" + locale.getDisplayName());
+        //     }
+        // }
+    }
 
     private void validateSdfFormatFdpParseEquality(final String formatStr, final Locale locale, final TimeZone timeZone,
         final FastDateParser dateParser, final Date inDate, final int year, final Date csDate) throws ParseException {
