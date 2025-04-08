@@ -685,7 +685,8 @@ public class FastDateParserTest extends AbstractLangTest {
     @Test
     public void testTzParses() throws Exception {
         // Check that all Locales can parse the time formats we use
-        for (final Locale locale : Locale.getAvailableLocales()) {
+        Locale.getAvailableLocales(); // (inserted line)
+        // for (final Locale locale : Locale.getAvailableLocales()) {
             // final FastDateParser fdp = new FastDateParser("yyyy/MM/dd z", TimeZone.getDefault(), locale);
 
             // for (final TimeZone timeZone : new TimeZone[] {NEW_YORK, REYKJAVIK, TimeZones.GMT}) {
@@ -699,7 +700,7 @@ public class FastDateParserTest extends AbstractLangTest {
                 // final Date actual = fdp.parse("2000/02/10 " + timeZone.getDisplayName(locale));
                 // assertEquals(expected, actual, "timeZone:" + timeZone.getID() + " locale:" + locale.getDisplayName());
             // }
-        }
+        // }
     }
 
     private void validateSdfFormatFdpParseEquality(final String formatStr, final Locale locale, final TimeZone timeZone,
