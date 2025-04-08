@@ -688,7 +688,7 @@ public class FastDateParserTest extends AbstractLangTest {
         for (final Locale locale : Locale.getAvailableLocales()) {
             final FastDateParser fdp = new FastDateParser("yyyy/MM/dd z", TimeZone.getDefault(), locale);
 
-            for (final TimeZone timeZone : new TimeZone[] {NEW_YORK, REYKJAVIK, TimeZones.GMT}) {
+            // for (final TimeZone timeZone : new TimeZone[] {NEW_YORK, REYKJAVIK, TimeZones.GMT}) {
                 // final Calendar cal = Calendar.getInstance(timeZone, locale);
                 // cal.clear();
                 // cal.set(Calendar.YEAR, 2000);
@@ -698,7 +698,7 @@ public class FastDateParserTest extends AbstractLangTest {
 
                 // final Date actual = fdp.parse("2000/02/10 " + timeZone.getDisplayName(locale));
                 // assertEquals(expected, actual, "timeZone:" + timeZone.getID() + " locale:" + locale.getDisplayName());
-            }
+            // }
         }
     }
 
