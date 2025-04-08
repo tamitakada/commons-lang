@@ -686,7 +686,7 @@ public class FastDateParserTest extends AbstractLangTest {
     public void testTzParses() throws Exception {
         // Check that all Locales can parse the time formats we use
         for (final Locale locale : Locale.getAvailableLocales()) {
-            final FastDateParser fdp = new FastDateParser("yyyy/MM/dd z", TimeZone.getDefault(), locale);
+            // final FastDateParser fdp = new FastDateParser("yyyy/MM/dd z", TimeZone.getDefault(), locale);
 
             // for (final TimeZone timeZone : new TimeZone[] {NEW_YORK, REYKJAVIK, TimeZones.GMT}) {
                 // final Calendar cal = Calendar.getInstance(timeZone, locale);
