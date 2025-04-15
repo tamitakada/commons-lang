@@ -59,6 +59,12 @@ public class FastDateParser_TimeZoneStrategyTest extends AbstractLangTest {
     private static final List<Locale> Java17Failures = new ArrayList<>();
     private static final AtomicInteger fails = new AtomicInteger();
 
+    @BeforeAll
+    public static void beforeAll() {
+        for (final Locale locale : Locale.getAvailableLocales())
+            final FastDateParser fdp = new FastDateParser("yyyy/MM/dd z", TimeZone.getDefault(), locale);
+    }
+
     @AfterAll
     public static void afterAll() {
         if (!Java17Failures.isEmpty()) {
